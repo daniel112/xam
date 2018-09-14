@@ -177,5 +177,27 @@
     <BundleResource Include="Resources\Sound\sound-5.mp3" />
     <BundleResource Include="Resources\Sound\sound-6.mp3" />
     <BundleResource Include="Resources\Sound\sound-7.mp3" />
+    <BundleResource Include="Resources\Sound\sound-8.mp3" />
+    <BundleResource Include="Resources\Sound\sound-9.mp3" />
+    <BundleResource Include="Resources\Sound\sound-10.mp3" />
+    <BundleResource Include="Resources\Sound\sound-11.mp3" />
+    <BundleResource Include="Resources\Sound\sound-12.mp3" />
+    <BundleResource Include="Resources\Sound\sound-13.mp3" />
+    <BundleResource Include="Resources\Sound\sound-14.mp3" />
+    <BundleResource Include="Resources\Sound\sound-15.mp3" />
+    <BundleResource Include="Resources\Sound\sound-16.mp3" />
+    <BundleResource Include="Resources\Sound\sound-17.mp3" />
+    <BundleResource Include="Resources\Sound\sound-18.mp3" />
+    <BundleResource Include="Resources\Sound\sound-19.mp3" />
+    <BundleResource Include="Resources\Sound\sound-20.mp3" />
+    <BundleResource Include="Resources\Sound\sound-21.mp3" />
+    <BundleResource Include="Resources\Sound\sound-22.mp3" />
+    <BundleResource Include="Resources\Sound\sound-23.mp3" />
+    <BundleResource Include="Resources\Sound\sound-24.mp3" />
+    <BundleResource Include="Resources\Sound\sound-25.mp3" />
+    <BundleResource Include="Resources\Sound\sound-26.mp3" />
+    <BundleResource Include="Resources\Sound\sound-27.mp3" />
+    <BundleResource Include="Resources\Sound\sound-28.mp3" />
+    <BundleResource Include="Resources\Sound\sound-29.mp3" />
   </ItemGroup>
 </Project>

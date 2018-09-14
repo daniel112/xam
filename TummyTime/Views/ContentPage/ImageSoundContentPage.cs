@@ -20,6 +20,7 @@ namespace TummyTime.Views {
         private const string AudioSourceSuffix = "mp3";
         private int counter;
         private Timer timer;
+        private Timer SoundTimer;
         private Image _image;
         private Image image {
             get {
@@ -60,6 +61,8 @@ namespace TummyTime.Views {
         private void Setup() {
 
             this.ViewModel.AvailableImages.Shuffle(new Random());
+            this.ViewModel.AvailableSounds.Shuffle(new Random());
+
             this.counter = 1;
             this.image.Source = ImageSource.FromResource($"{AssemblyPrefix}.{this.ViewModel.AvailableImages[0]}.{EmbeddedImageSuffix}", typeof(ImageSoundContentPage).GetTypeInfo().Assembly);
             this.AudioPlayer.Play($"/Sound/{this.ViewModel.AvailableSounds[0]}.{AudioSourceSuffix}");
@@ -72,12 +75,24 @@ namespace TummyTime.Views {
 
         private void StartLoop() {
 
-            // every 10 seconds
-            timer = new Timer(5000);
+            // image every 10 seconds
+            timer = new Timer(10000);
             timer.Elapsed += new ElapsedEventHandler(Timer_ElapsedHandler);
             timer.Start();
 
+            // sound play only the first 5 seconds
+            SoundTimer = new Timer(5000);
+            SoundTimer.Elapsed += SoundTimer_Elapsed;
+            SoundTimer.Start();
+
         }
+
+        void SoundTimer_Elapsed(object sender, ElapsedEventArgs e) {
+
+            this.AudioPlayer.Pause();
+            SoundTimer.Stop();
+        }
+
 
         private void Timer_ElapsedHandler(object source, ElapsedEventArgs e) {
 
@@ -87,7 +102,10 @@ namespace TummyTime.Views {
             } else {
                 Device.BeginInvokeOnMainThread(() => {
                     this.image.Source = ImageSource.FromResource($"{AssemblyPrefix}.{this.ViewModel.AvailableImages[counter]}.{EmbeddedImageSuffix}", typeof(ImageSoundContentPage).GetTypeInfo().Assembly);
+
+                    // start sound for 5 sec
                     this.AudioPlayer.Play($"/Sound/{this.ViewModel.AvailableSounds[counter]}.{AudioSourceSuffix}");
+                    this.SoundTimer.Start();
 
                 });
                 Console.WriteLine($"\n\n{counter+1}");

@@ -22,7 +22,7 @@ namespace TummyTime.iOS.Common.DependencyInterfaces {
         public void Play(string pathToAudioFile) {
             // Check if _audioPlayer is currently playing  
             if (_audioPlayer != null) {
-                _audioPlayer.FinishedPlaying -= Player_FinishedPlaying;
+               // _audioPlayer.FinishedPlaying -= Player_FinishedPlaying;
                 _audioPlayer.Stop();
             }
 
