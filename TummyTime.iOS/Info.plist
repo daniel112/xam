@@ -21,16 +21,18 @@
 	<key>MinimumOSVersion</key>
 	<string>11.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>TummyTime</string>
+	<string>Abstract</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.danielyo.TummyTime</string>
+	<string>com.danielyo.TummyTimeAbstract</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>CFBundleName</key>
-	<string>TummyTime</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleName</key>
+	<string>Abstract</string>
 </dict>
 </plist>

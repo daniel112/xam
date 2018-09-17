@@ -145,6 +145,10 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\launchImage.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\launchImage.imageset\launchImage.jpg" />
+    <ImageAsset Include="Assets.xcassets\disclaimer.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\disclaimer.imageset\disclaimer.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -167,6 +171,8 @@
     <Folder Include="Common\" />
     <Folder Include="Common\DependencyInterfaces\" />
     <Folder Include="Resources\Sound\" />
+    <Folder Include="Assets.xcassets\launchImage.imageset\" />
+    <Folder Include="Assets.xcassets\disclaimer.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Sound\sound-2.mp3" />
@@ -199,5 +205,18 @@
     <BundleResource Include="Resources\Sound\sound-27.mp3" />
     <BundleResource Include="Resources\Sound\sound-28.mp3" />
     <BundleResource Include="Resources\Sound\sound-29.mp3" />
+    <BundleResource Include="Resources\Sound\sound-30.mp3" />
+    <BundleResource Include="Resources\Sound\sound-31.mp3" />
+    <BundleResource Include="Resources\Sound\sound-32.mp3" />
+    <BundleResource Include="Resources\Sound\sound-33.mp3" />
+    <BundleResource Include="Resources\Sound\sound-34.mp3" />
+    <BundleResource Include="Resources\Sound\sound-35.mp3" />
+    <BundleResource Include="Resources\Sound\sound-36.mp3" />
+    <BundleResource Include="Resources\Sound\sound37.mp3" />
+    <BundleResource Include="Resources\Sound\sound-38.mp3" />
+    <BundleResource Include="Resources\Sound\sound-39.mp3" />
+    <BundleResource Include="Resources\Sound\sound-40.mp3" />
+    <BundleResource Include="Resources\Sound\sound-41.mp3" />
+    <BundleResource Include="Resources\Sound\sound-42.mp3" />
   </ItemGroup>
 </Project>

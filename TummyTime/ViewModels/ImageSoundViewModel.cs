@@ -10,8 +10,8 @@ namespace TummyTime.ViewModels {
             get {
                 if (_AvailableImages == null) {
                     _AvailableImages = new List<string>();
-                    for (int i = 0; i < 50; i++) {
-                        _AvailableImages.Add($"bg{i}");
+                    for (int i = 0; i < 43; i++) {
+                        _AvailableImages.Add($"bg-{i}");
                     }
 
                 }
@@ -25,7 +25,7 @@ namespace TummyTime.ViewModels {
             get {
                 if (_AvailableSounds == null) {
                     _AvailableSounds = new List<string>();
-                    for (int i = 0; i < 30; i++) {
+                    for (int i = 0; i < 43; i++) {
                         _AvailableSounds.Add($"sound-{i}");
                     }
 

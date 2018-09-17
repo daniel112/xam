@@ -62,6 +62,7 @@ namespace TummyTime.Views {
 
             this.ViewModel.AvailableImages.Shuffle(new Random());
             this.ViewModel.AvailableSounds.Shuffle(new Random());
+            this.ViewModel.AvailableSounds.Shuffle(new Random());
 
             this.counter = 1;
             this.image.Source = ImageSource.FromResource($"{AssemblyPrefix}.{this.ViewModel.AvailableImages[0]}.{EmbeddedImageSuffix}", typeof(ImageSoundContentPage).GetTypeInfo().Assembly);
@@ -76,12 +77,12 @@ namespace TummyTime.Views {
         private void StartLoop() {
 
             // image every 10 seconds
-            timer = new Timer(10000);
+            timer = new Timer(5000);
             timer.Elapsed += new ElapsedEventHandler(Timer_ElapsedHandler);
             timer.Start();
 
             // sound play only the first 5 seconds
-            SoundTimer = new Timer(5000);
+            SoundTimer = new Timer(3000);
             SoundTimer.Elapsed += SoundTimer_Elapsed;
             SoundTimer.Start();
 

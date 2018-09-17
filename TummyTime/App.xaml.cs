@@ -12,7 +12,7 @@ namespace TummyTime
         {
             InitializeComponent();
 
-            MainPage = new ImageSoundContentPage();
+            MainPage = new DisclaimerContentPage();
         }
 
         protected override void OnStart()
