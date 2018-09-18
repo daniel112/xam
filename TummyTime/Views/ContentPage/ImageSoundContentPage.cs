@@ -67,6 +67,8 @@ namespace TummyTime.Views {
             this.counter = 1;
             this.image.Source = ImageSource.FromResource($"{AssemblyPrefix}.{this.ViewModel.AvailableImages[0]}.{EmbeddedImageSuffix}", typeof(ImageSoundContentPage).GetTypeInfo().Assembly);
             this.AudioPlayer.Play($"/Sound/{this.ViewModel.AvailableSounds[0]}.{AudioSourceSuffix}");
+            this.AudioPlayer.FadeToMute();
+
             Content = new StackLayout {
                 Children = {
                     this.image
@@ -77,12 +79,12 @@ namespace TummyTime.Views {
         private void StartLoop() {
 
             // image every 10 seconds
-            timer = new Timer(5000);
+            timer = new Timer(10000);
             timer.Elapsed += new ElapsedEventHandler(Timer_ElapsedHandler);
             timer.Start();
 
             // sound play only the first 5 seconds
-            SoundTimer = new Timer(3000);
+            SoundTimer = new Timer(5000);
             SoundTimer.Elapsed += SoundTimer_Elapsed;
             SoundTimer.Start();
 
@@ -106,6 +108,7 @@ namespace TummyTime.Views {
 
                     // start sound for 5 sec
                     this.AudioPlayer.Play($"/Sound/{this.ViewModel.AvailableSounds[counter]}.{AudioSourceSuffix}");
+                    this.AudioPlayer.FadeToMute();
                     this.SoundTimer.Start();
 
                 });

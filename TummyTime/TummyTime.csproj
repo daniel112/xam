@@ -23,6 +23,7 @@
     <Folder Include="Common\EmbeddedResources\" />
     <Folder Include="Common\" />
     <Folder Include="Common\DependencyInterfaces\" />
+    <Folder Include="Common\EmbeddedResources\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="MainPage.xaml.cs" />
@@ -73,22 +74,60 @@
     <None Remove="Common\EmbeddedResources\Images\bg5.jpg" />
     <None Remove="Common\EmbeddedResources\Images\bg6.jpg" />
     <None Remove="Common\EmbeddedResources\Images\bg9.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-0.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-1.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-2.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-3.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-4.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-5.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-6.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-7.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-8.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-9.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-10.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-11.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-12.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-13.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-14.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-15.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-16.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-17.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-18.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-19.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-20.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-21.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-22.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-23.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-24.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-25.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-26.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-27.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-28.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-29.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-30.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-31.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-32.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-33.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-34.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-35.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-36.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-37.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-38.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-39.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-40.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-41.jpg" />
+    <None Remove="Common\EmbeddedResources\Images\bg-42.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-8.jpg" />
-    <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-19.jpg" />
-    <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-41.jpg" />
-    <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-40.jpg" />
-    <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-30.jpg" />
-    <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-1.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-0.jpg" />
-    <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-42.jpg" />
+    <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-1.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-2.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-3.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-4.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-5.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-6.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-7.jpg" />
+    <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-8.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-9.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-10.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-11.jpg" />
@@ -99,6 +138,7 @@
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-16.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-17.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-18.jpg" />
+    <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-19.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-20.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-21.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-22.jpg" />
@@ -109,6 +149,7 @@
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-27.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-28.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-29.jpg" />
+    <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-30.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-31.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-32.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-33.jpg" />
@@ -118,5 +159,8 @@
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-37.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-38.jpg" />
     <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-39.jpg" />
+    <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-40.jpg" />
+    <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-41.jpg" />
+    <EmbeddedResource Include="Common\EmbeddedResources\Images\bg-42.jpg" />
   </ItemGroup>
 </Project>

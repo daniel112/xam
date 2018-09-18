@@ -8,11 +8,10 @@ namespace TummyTime
 {
     public partial class App : Application
     {
-        public App()
-        {
+        public App() {
             InitializeComponent();
 
-            MainPage = new DisclaimerContentPage();
+            MainPage = new SplashScreenContentPage();
         }
 
         protected override void OnStart()

@@ -4,6 +4,7 @@ namespace TummyTime.Common.DependencyInterfaces {
         void Play(string pathToAudioFile);
         void Play();
         void Pause();
+        void FadeToMute();
         Action OnFinishedPlaying { get; set; }
     }
 }

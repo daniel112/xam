@@ -37,14 +37,18 @@ namespace TummyTime.iOS.Common.DependencyInterfaces {
 
         }
 
-
         public void Play() {
+            _audioPlayer?.SetVolume(1, 0);
             _audioPlayer?.Play();
         }
 
+        public void FadeToMute() {
+            _audioPlayer?.SetVolume(0, 5);
+        }
 
         private void Player_FinishedPlaying(object sender, AVStatusEventArgs e) {
             OnFinishedPlaying?.Invoke();
         }
+
     }
 }
