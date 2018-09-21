@@ -10,6 +10,8 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -34,5 +36,10 @@
 	<string>Abstract</string>
 	<key>CFBundleVersion</key>
 	<string>3</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Fonts/Cambria.ttf</string>
+		<string>Fonts/cambriab.ttf</string>
+	</array>
 </dict>
 </plist>

@@ -17,7 +17,6 @@ namespace TummyTime.Views {
                         BackgroundColor = Color.FromHex("89211b"),
                         HorizontalOptions = LayoutOptions.FillAndExpand,
                         CornerRadius = 0,
-                        HeightRequest = 60
                     };
                     _DismissButton.Clicked += DismissButton_Clicked;
                 }
@@ -25,24 +24,72 @@ namespace TummyTime.Views {
             }
         }
 
-        private Image _ImageDisclaimer;
-        private Image ImageDisclaimer {
+        private Image _ImageBow;
+        private Image ImageBow {
             get {
-                if (_ImageDisclaimer == null) {
-                    _ImageDisclaimer = new Image {
+                if (_ImageBow == null) {
+                    _ImageBow = new Image {
                         Aspect = Aspect.AspectFit,
-                        VerticalOptions = LayoutOptions.FillAndExpand,
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
-                        Source = "disclaimer"
+                        Source = "bow",
+                        WidthRequest = 330,
                     };
                 }
-                return _ImageDisclaimer;
+                return _ImageBow;
             }
             set {
-                _ImageDisclaimer = value;
+                _ImageBow = value;
             }
         }
 
+        private Label _LabelDisclaimer;
+        private Label LabelDisclaimer {
+            get {
+                if (_LabelDisclaimer == null) {
+                    _LabelDisclaimer = new Label {
+                        Text = "The Tummy Time mobile app is not intended as a substitute for adult supervision.  Please never leave your baby alone during tummy time. ",
+                        FontSize = 17,
+                        FontFamily = "Cambria", // iOS only TODO: add android ttf
+                        LineBreakMode = LineBreakMode.WordWrap,
+                        HorizontalOptions = LayoutOptions.Center,
+                        HorizontalTextAlignment = TextAlignment.Center,
+                        VerticalOptions = LayoutOptions.Center,
+                        Margin = new Thickness(30, 0, 30 , 0)
+                    };
+                }
+
+                return _LabelDisclaimer;
+            }
+        }
+
+        private Label _labelSite;
+        private Label LabelSite {
+            get {
+                if (_labelSite == null) {
+                    _labelSite = new Label {
+                        Text = "TummyTimeApps.com",
+                        FontSize = 20,
+                        FontFamily = "Cambria", // iOS only TODO: add android ttf
+                        LineBreakMode = LineBreakMode.WordWrap,
+                        HorizontalOptions = LayoutOptions.Center,
+                        HorizontalTextAlignment = TextAlignment.Center,
+                        VerticalOptions = LayoutOptions.Center,
+                    };
+                }
+
+                return _labelSite;
+            }
+        }
+
+
+        private StackLayout _StackDisclaimer;
+        private StackLayout StackDisclaimer {
+            get {
+                if (_StackDisclaimer == null) {
+                    _StackDisclaimer = new StackLayout();
+                }
+                return _StackDisclaimer;
+            }
+        }
         #endregion
 
         #region Initialization
@@ -64,21 +111,31 @@ namespace TummyTime.Views {
         #region Private API
         private void Setup() {
             this.BackgroundColor = Color.FromHex("fbfbfb");
-            Content = new StackLayout {
-                Children = {
-                    this.ImageDisclaimer,
-                    this.DismissButton
-                }
-            };
+            AbsoluteLayout layout = new AbsoluteLayout();
+
+            this.StackDisclaimer.Children.Add(this.LabelDisclaimer);
+            this.StackDisclaimer.Children.Add(this.ImageBow);
+            this.StackDisclaimer.Children.Add(this.LabelSite);
+            // center label
+            AbsoluteLayout.SetLayoutFlags(this.StackDisclaimer, AbsoluteLayoutFlags.PositionProportional);
+            AbsoluteLayout.SetLayoutBounds(this.StackDisclaimer, new Rectangle(0.5, 0.5, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
+            layout.Children.Add(this.StackDisclaimer);
+
+
+            // align to bottom button
+            AbsoluteLayout.SetLayoutFlags(this.DismissButton, AbsoluteLayoutFlags.PositionProportional | AbsoluteLayoutFlags.WidthProportional);
+            AbsoluteLayout.SetLayoutBounds(this.DismissButton, new Rectangle(0, 1, 1, 60));
+            layout.Children.Add(this.DismissButton);
+
+
+            Content = layout;
         }
 
 
 
         // UIResponder
         void DismissButton_Clicked(object sender, EventArgs e) {
-            Console.WriteLine("PRESSED");
             Application.Current.MainPage = new ImageSoundContentPage();
-
         }
 
         #endregion

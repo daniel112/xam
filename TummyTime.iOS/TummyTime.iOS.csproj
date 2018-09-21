@@ -107,49 +107,27 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\launchImage.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\launchImage.imageset\launchImage.jpg" />
     <ImageAsset Include="Assets.xcassets\disclaimer.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\disclaimer.imageset\disclaimer.jpg" />
+    <ImageAsset Include="Assets.xcassets\bow.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\bow.imageset\bowsmall.png" />
+    <ImageAsset Include="Assets.xcassets\endLogo.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\endLogo.imageset\Tummy Time FINAL1 - large transparent with web address.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\TUMMY TIME LARGE PNG white background 1024x1024.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\20.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\167.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\152.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\87.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -174,6 +152,9 @@
     <Folder Include="Resources\Sound\" />
     <Folder Include="Assets.xcassets\launchImage.imageset\" />
     <Folder Include="Assets.xcassets\disclaimer.imageset\" />
+    <Folder Include="Assets.xcassets\bow.imageset\" />
+    <Folder Include="Resources\Fonts\" />
+    <Folder Include="Assets.xcassets\endLogo.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Sound\sound-2.mp3" />
@@ -206,18 +187,13 @@
     <BundleResource Include="Resources\Sound\sound-27.mp3" />
     <BundleResource Include="Resources\Sound\sound-28.mp3" />
     <BundleResource Include="Resources\Sound\sound-29.mp3" />
-    <BundleResource Include="Resources\Sound\sound-30.mp3" />
-    <BundleResource Include="Resources\Sound\sound-31.mp3" />
-    <BundleResource Include="Resources\Sound\sound-32.mp3" />
-    <BundleResource Include="Resources\Sound\sound-33.mp3" />
-    <BundleResource Include="Resources\Sound\sound-34.mp3" />
-    <BundleResource Include="Resources\Sound\sound-35.mp3" />
-    <BundleResource Include="Resources\Sound\sound-36.mp3" />
-    <BundleResource Include="Resources\Sound\sound37.mp3" />
-    <BundleResource Include="Resources\Sound\sound-38.mp3" />
-    <BundleResource Include="Resources\Sound\sound-39.mp3" />
-    <BundleResource Include="Resources\Sound\sound-40.mp3" />
-    <BundleResource Include="Resources\Sound\sound-41.mp3" />
-    <BundleResource Include="Resources\Sound\sound-42.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Fonts\Cambria.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Fonts\cambriab.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

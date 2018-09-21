@@ -25,7 +25,7 @@ namespace TummyTime.ViewModels {
             get {
                 if (_AvailableSounds == null) {
                     _AvailableSounds = new List<string>();
-                    for (int i = 0; i < 43; i++) {
+                    for (int i = 0; i < 30; i++) {
                         _AvailableSounds.Add($"sound-{i}");
                     }
 

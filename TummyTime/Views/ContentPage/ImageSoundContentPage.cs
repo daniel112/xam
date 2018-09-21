@@ -99,9 +99,14 @@ namespace TummyTime.Views {
 
         private void Timer_ElapsedHandler(object source, ElapsedEventArgs e) {
 
-            if (counter == this.ViewModel.AvailableImages.Count - 1) {
+            // stop at 30
+            if (counter == 30) {
                 Console.WriteLine("\n\nDONE");
-                timer.Stop();
+                Device.BeginInvokeOnMainThread(() => {
+                    timer.Stop();
+                    Application.Current.MainPage = new EndContentPage();
+                });
+
             } else {
                 Device.BeginInvokeOnMainThread(() => {
                     this.image.Source = ImageSource.FromResource($"{AssemblyPrefix}.{this.ViewModel.AvailableImages[counter]}.{EmbeddedImageSuffix}", typeof(ImageSoundContentPage).GetTypeInfo().Assembly);
