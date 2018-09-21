@@ -102,24 +102,25 @@ namespace TummyTime.Views {
             // stop at 30
             if (counter == 30) {
                 Console.WriteLine("\n\nDONE");
+                timer.Enabled = false;
+                SoundTimer.Enabled = false;
                 Device.BeginInvokeOnMainThread(() => {
-                    timer.Stop();
                     Application.Current.MainPage = new EndContentPage();
                 });
 
             } else {
+
+                // start sound for 5 sec
+                this.AudioPlayer.Play($"/Sound/{this.ViewModel.AvailableSounds[counter]}.{AudioSourceSuffix}");
+                this.AudioPlayer.FadeToMute();
+                this.SoundTimer.Start();
                 Device.BeginInvokeOnMainThread(() => {
                     this.image.Source = ImageSource.FromResource($"{AssemblyPrefix}.{this.ViewModel.AvailableImages[counter]}.{EmbeddedImageSuffix}", typeof(ImageSoundContentPage).GetTypeInfo().Assembly);
-
-                    // start sound for 5 sec
-                    this.AudioPlayer.Play($"/Sound/{this.ViewModel.AvailableSounds[counter]}.{AudioSourceSuffix}");
-                    this.AudioPlayer.FadeToMute();
-                    this.SoundTimer.Start();
-
+                    Console.WriteLine($"\n\n{counter + 1} \n\n sound: {this.ViewModel.AvailableSounds[counter]}");
                 });
-                Console.WriteLine($"\n\n{counter+1}");
-
+                 
                 this.counter++;
+
             }
         }
 
