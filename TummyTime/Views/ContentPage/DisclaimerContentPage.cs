@@ -113,6 +113,7 @@ namespace TummyTime.Views {
             this.BackgroundColor = Color.FromHex("fbfbfb");
             AbsoluteLayout layout = new AbsoluteLayout();
 
+
             this.StackDisclaimer.Children.Add(this.LabelDisclaimer);
             this.StackDisclaimer.Children.Add(this.ImageBow);
             this.StackDisclaimer.Children.Add(this.LabelSite);
@@ -127,6 +128,17 @@ namespace TummyTime.Views {
             AbsoluteLayout.SetLayoutBounds(this.DismissButton, new Rectangle(0, 1, 1, 60));
             layout.Children.Add(this.DismissButton);
 
+
+            // update size based on device
+            if (Device.Idiom == TargetIdiom.Tablet) {
+                this.LabelDisclaimer.FontSize = 24;
+                this.LabelSite.FontSize = 22;
+            }
+
+            if (Device.Idiom == TargetIdiom.Phone) {
+                this.LabelDisclaimer.FontSize = 17;
+                this.LabelSite.FontSize = 15;
+            }
 
             Content = layout;
         }

@@ -44,13 +44,13 @@ namespace TummyTime.Views {
 
         #region Initialization
         public EndContentPage() {
-            this.BackgroundColor = Color.FromHex("fbfbfb");
+            //this.BackgroundColor = Color.FromHex("fbfbfb");
 
             AbsoluteLayout layout = new AbsoluteLayout();
 
            
             AbsoluteLayout.SetLayoutFlags(this.ImageBow, AbsoluteLayoutFlags.PositionProportional);
-            AbsoluteLayout.SetLayoutBounds(this.ImageBow, new Rectangle(.5, 4, 400, 362));
+            AbsoluteLayout.SetLayoutBounds(this.ImageBow, new Rectangle(.5, .5, 400, 362));
             layout.Children.Add(this.ImageBow);
 
             // align to bottom button

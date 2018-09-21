@@ -67,7 +67,6 @@ namespace TummyTime.Views {
             this.counter = 1;
             this.image.Source = ImageSource.FromResource($"{AssemblyPrefix}.{this.ViewModel.AvailableImages[0]}.{EmbeddedImageSuffix}", typeof(ImageSoundContentPage).GetTypeInfo().Assembly);
             this.AudioPlayer.Play($"/Sound/{this.ViewModel.AvailableSounds[0]}.{AudioSourceSuffix}");
-            this.AudioPlayer.FadeToMute();
 
             Content = new StackLayout {
                 Children = {
@@ -112,7 +111,6 @@ namespace TummyTime.Views {
 
                 // start sound for 5 sec
                 this.AudioPlayer.Play($"/Sound/{this.ViewModel.AvailableSounds[counter]}.{AudioSourceSuffix}");
-                this.AudioPlayer.FadeToMute();
                 this.SoundTimer.Start();
                 Device.BeginInvokeOnMainThread(() => {
                     this.image.Source = ImageSource.FromResource($"{AssemblyPrefix}.{this.ViewModel.AvailableImages[counter]}.{EmbeddedImageSuffix}", typeof(ImageSoundContentPage).GetTypeInfo().Assembly);
