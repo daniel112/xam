@@ -13,8 +13,6 @@ namespace TummyTime.Views {
                     _ImageBow = new Image {
                         Aspect = Aspect.AspectFit,
                         Source = "endLogo",
-                        VerticalOptions = LayoutOptions.FillAndExpand,
-                        HorizontalOptions = LayoutOptions.FillAndExpand
                     };
                 }
                 return _ImageBow;
@@ -41,17 +39,25 @@ namespace TummyTime.Views {
                 return _DismissButton;
             }
         }
+
         #endregion
 
         #region Initialization
         public EndContentPage() {
             this.BackgroundColor = Color.FromHex("fbfbfb");
-            Content = new StackLayout {
-                Children = {
-                    ImageBow,
-                    DismissButton
-                }
-            };
+
+            AbsoluteLayout layout = new AbsoluteLayout();
+
+           
+            AbsoluteLayout.SetLayoutFlags(this.ImageBow, AbsoluteLayoutFlags.PositionProportional);
+            AbsoluteLayout.SetLayoutBounds(this.ImageBow, new Rectangle(.5, .5, 400, 362));
+            layout.Children.Add(this.ImageBow);
+
+            // align to bottom button
+            AbsoluteLayout.SetLayoutFlags(this.DismissButton, AbsoluteLayoutFlags.PositionProportional | AbsoluteLayoutFlags.WidthProportional);
+            AbsoluteLayout.SetLayoutBounds(this.DismissButton, new Rectangle(0, 1, 1, 60));
+            layout.Children.Add(this.DismissButton);
+            Content = layout;
         }
         #endregion
 

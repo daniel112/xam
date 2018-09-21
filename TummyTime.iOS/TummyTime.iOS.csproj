@@ -109,8 +109,6 @@
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\launchImage.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\launchImage.imageset\launchImage.jpg" />
-    <ImageAsset Include="Assets.xcassets\disclaimer.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\disclaimer.imageset\disclaimer.jpg" />
     <ImageAsset Include="Assets.xcassets\bow.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\bow.imageset\bowsmall.png" />
     <ImageAsset Include="Assets.xcassets\endLogo.imageset\Contents.json" />
