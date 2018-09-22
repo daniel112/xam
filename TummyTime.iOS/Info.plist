@@ -34,12 +34,12 @@
 	<string>1.0.0</string>
 	<key>CFBundleName</key>
 	<string>Abstract</string>
-	<key>CFBundleVersion</key>
-	<string>3</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Fonts/Cambria.ttf</string>
 		<string>Fonts/cambriab.ttf</string>
 	</array>
+	<key>CFBundleVersion</key>
+	<string>4</string>
 </dict>
 </plist>

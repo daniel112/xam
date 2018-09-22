@@ -13,6 +13,7 @@ namespace TummyTime.Views {
                     _ImageBow = new Image {
                         Aspect = Aspect.AspectFit,
                         Source = "endLogo",
+                        WidthRequest = 300
                     };
                 }
                 return _ImageBow;
@@ -50,12 +51,12 @@ namespace TummyTime.Views {
 
            
             AbsoluteLayout.SetLayoutFlags(this.ImageBow, AbsoluteLayoutFlags.PositionProportional);
-            AbsoluteLayout.SetLayoutBounds(this.ImageBow, new Rectangle(.5, .5, 400, 362));
+            AbsoluteLayout.SetLayoutBounds(this.ImageBow, new Rectangle(.5, .5, 300, 300));
             layout.Children.Add(this.ImageBow);
 
             // align to bottom button
             AbsoluteLayout.SetLayoutFlags(this.DismissButton, AbsoluteLayoutFlags.PositionProportional | AbsoluteLayoutFlags.WidthProportional);
-            AbsoluteLayout.SetLayoutBounds(this.DismissButton, new Rectangle(0, 1, 1, 60));
+            AbsoluteLayout.SetLayoutBounds(this.DismissButton, new Rectangle(0, 1, 1, 50));
             layout.Children.Add(this.DismissButton);
             Content = layout;
         }

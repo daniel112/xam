@@ -42,11 +42,12 @@ namespace TummyTime.Views {
 
         #region Initialization
         public ImageSoundContentPage() {
-            this.Setup();
+
         }
 
         protected override void OnAppearing() {
             base.OnAppearing();
+            this.Setup();
             // data
             this.StartLoop();
         }
@@ -64,9 +65,10 @@ namespace TummyTime.Views {
             this.ViewModel.AvailableSounds.Shuffle(new Random());
             this.ViewModel.AvailableSounds.Shuffle(new Random());
 
-            this.counter = 1;
-            this.image.Source = ImageSource.FromResource($"{AssemblyPrefix}.{this.ViewModel.AvailableImages[0]}.{EmbeddedImageSuffix}", typeof(ImageSoundContentPage).GetTypeInfo().Assembly);
-            this.AudioPlayer.Play($"/Sound/{this.ViewModel.AvailableSounds[0]}.{AudioSourceSuffix}");
+            this.counter = 0;
+            this.image.Source = $"Image-0";
+            this.AudioPlayer.Play($"/Sound/{this.ViewModel.AvailableSounds[counter]}.{AudioSourceSuffix}");
+            this.counter++;
 
             Content = new StackLayout {
                 Children = {
@@ -99,7 +101,7 @@ namespace TummyTime.Views {
         private void Timer_ElapsedHandler(object source, ElapsedEventArgs e) {
 
             // stop at 30
-            if (counter == 30) {
+            if (counter >= 30) {
                 Console.WriteLine("\n\nDONE");
                 timer.Enabled = false;
                 SoundTimer.Enabled = false;
@@ -108,16 +110,21 @@ namespace TummyTime.Views {
                 });
 
             } else {
-
+                Console.WriteLine(counter);
                 // start sound for 5 sec
-                this.AudioPlayer.Play($"/Sound/{this.ViewModel.AvailableSounds[counter]}.{AudioSourceSuffix}");
-                this.SoundTimer.Start();
-                Device.BeginInvokeOnMainThread(() => {
-                    this.image.Source = ImageSource.FromResource($"{AssemblyPrefix}.{this.ViewModel.AvailableImages[counter]}.{EmbeddedImageSuffix}", typeof(ImageSoundContentPage).GetTypeInfo().Assembly);
-                    Console.WriteLine($"\n\n{counter + 1} \n\n sound: {this.ViewModel.AvailableSounds[counter]}");
-                });
+                if (counter <= this.ViewModel.AvailableSounds.Count - 1) {
+                    this.AudioPlayer.Play($"/Sound/{this.ViewModel.AvailableSounds[counter]}.{AudioSourceSuffix}");            
+					this.SoundTimer.Start();
+                    Device.BeginInvokeOnMainThread(() => {
+                        this.image.Source = $"{this.ViewModel.AvailableImages[counter]}";
+                        Console.WriteLine($"Image: {this.ViewModel.AvailableImages[counter]}");                                                             
+                        this.counter++;
+                    });
+
+                }
+
                  
-                this.counter++;
+
 
             }
         }
