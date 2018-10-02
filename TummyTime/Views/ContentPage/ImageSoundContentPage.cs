@@ -66,7 +66,7 @@ namespace TummyTime.Views {
             this.ViewModel.AvailableSounds.Shuffle(new Random());
 
             this.counter = 0;
-            this.image.Source = $"Image-0";
+            this.image.Source = $"{this.ViewModel.AvailableImages[counter]}";
             this.AudioPlayer.Play($"/Sound/{this.ViewModel.AvailableSounds[counter]}.{AudioSourceSuffix}");
             this.counter++;
 
